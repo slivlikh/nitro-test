@@ -1,3 +1,8 @@
+import type {FC} from "react";
 import {Error} from "../../shared/components/Error.tsx";
 
-export const DataLoadingError = () => <Error title='500' description="Ooops, something went wrong"/>
+type DataLoadingErrorProps = {
+    onRetry: () => void;
+}
+
+export const DataLoadingError: FC<DataLoadingErrorProps> = ({ onRetry }) => <Error title='500' description="Ooops, something went wrong" onRetry={onRetry}/>

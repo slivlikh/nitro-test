@@ -1,13 +1,12 @@
 import type {FC} from 'react'
 import {Link} from 'react-router'
-import type {Basket} from "../../shared/api/basket/shema.ts";
-
-type BasketIndicatorViewProps = {
-    basket: Basket
-}
+import {useSuspenseBasket} from "../../shared/api";
 
 
-export const BasketIndicatorView: FC<BasketIndicatorViewProps> = ({basket}) => {
+
+export const BasketIndicatorView: FC = () => {
+
+    const {data: basket} = useSuspenseBasket()
 
     const totalQuantity = basket.reduce((acc, {quantity}) => {
         return acc + quantity;

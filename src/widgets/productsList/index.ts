@@ -1,1 +1,1 @@
-export {ProductsList} from "./components/ProductsList.tsx";
+export {DataLoading as ProductsList} from "./components/DataLoading";
