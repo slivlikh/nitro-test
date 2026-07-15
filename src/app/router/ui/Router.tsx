@@ -5,11 +5,11 @@ import {Spinner} from "../../../UI";
 import {ChunkLoadingError, NotExistsError} from "../../../widgets/errors";
 
 const ProductsLazy = lazy(() =>
-    import('../../../pages/products/components/Products.tsx').then((module) => ({default: module.Products}))
+    import('../../../pages/products').then((module) => ({default: module.Products}))
 );
 
 const BasketLazy = lazy(() =>
-    import('../../../pages/basket/components/Basket.tsx').then((module) => ({default: module.Basket}))
+    import('../../../pages/basket').then((module) => ({default: module.Basket}))
 );
 
 export const Router = () => (

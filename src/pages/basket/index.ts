@@ -1,1 +1,1 @@
-export {Basket} from "./components/Basket.tsx";
+export {Basket} from "./ui/Basket.tsx";

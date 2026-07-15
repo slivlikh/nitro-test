@@ -1,1 +1,1 @@
-export {Router} from "./components/Router.tsx";
+export {Router} from "./ui/Router.tsx";
