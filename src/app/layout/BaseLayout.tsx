@@ -1,14 +1,15 @@
-import {Router} from "../router";
+import type {FC} from "react";
+import {Outlet} from "react-router";
 import {Paper} from "../../UI";
 import {ContentWrapper, Wrapper} from "./style.ts";
 import {Header} from "../../widgets/header";
 
-export const BaseLayout = () => (
+export const BaseLayout: FC = () => (
     <Wrapper>
         <Header/>
         <ContentWrapper>
             <Paper>
-                <Router/>
+                <Outlet />
             </Paper>
         </ContentWrapper>
     </Wrapper>

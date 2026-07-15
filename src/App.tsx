@@ -3,7 +3,7 @@ import {
     QueryClientProvider,
 } from '@tanstack/react-query'
 import {BrowserRouter} from "react-router";
-import {BaseLayout} from "./app/layout/BaseLayout.tsx";
+import {Router} from "./app/router";
 import 'normalize.css';
 import './index.css';
 
@@ -12,7 +12,7 @@ const queryClient = new QueryClient()
 export const App = () => (
     <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-            <BaseLayout/>
+            <Router/>
         </BrowserRouter>
     </QueryClientProvider>
 )
