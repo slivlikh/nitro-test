@@ -1,22 +1,15 @@
 import {Router} from "../router";
 import {Paper} from "../../UI";
-import {BasketIndicator} from "../../widgets/basketIndicator";
-import {ContentWrapper, HeaderWrapper, Wrapper} from "./style.ts";
+import {ContentWrapper, Wrapper} from "./style.ts";
+import {Header} from "../../widgets/header";
 
-export const BaseLayout = () => {
-
-    return (
-        <Wrapper>
-            <HeaderWrapper>
-                <Paper>
-                    <BasketIndicator/>
-                </Paper>
-            </HeaderWrapper>
-            <ContentWrapper>
-                <Paper>
-                    <Router/>
-                </Paper>
-            </ContentWrapper>
-        </Wrapper>
-    )
-}
+export const BaseLayout = () => (
+    <Wrapper>
+        <Header/>
+        <ContentWrapper>
+            <Paper>
+                <Router/>
+            </Paper>
+        </ContentWrapper>
+    </Wrapper>
+)

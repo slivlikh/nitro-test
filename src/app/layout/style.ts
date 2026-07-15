@@ -11,9 +11,3 @@ export const ContentWrapper = styled.div`
     width: 100%;
     flex-grow: 1;
 `
-
-export const HeaderWrapper = styled.header`
-    flex-grow: 0;
-    flex-shrink: 0;
-    height: 50px;
-`
