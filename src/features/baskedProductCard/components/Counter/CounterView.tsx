@@ -1,8 +1,7 @@
 import {type FC} from "react";
-import {Button} from "../../../../UI";
 import {type BasketItem} from "../../../../shared/api";
-import {useQuantityManipulation} from "./hooks/useQuantityManipulation.ts";
-import {Wrapper} from "./style.ts";
+import {useUpdateQuantity} from "./useUpdateQuantity.ts";
+import {Counter} from "../../../../UI";
 
 type CounterProps = {
     quantity: BasketItem['quantity'],
@@ -14,19 +13,12 @@ type CounterProps = {
 export const CounterView: FC<CounterProps> = ({quantity, productId, isDisabled}) => {
 
     const {
-        internalQuantity,
-        handleIncrease,
         handleChange,
-        handleDecrease,
-        isPending
-    } = useQuantityManipulation(quantity, productId)
+        isPending,
+        key,
+    } = useUpdateQuantity(productId)
 
     return (
-        <Wrapper>
-            <Button disabled={internalQuantity === 1 || isPending || isDisabled} onClick={handleDecrease}>-</Button>
-            <input disabled={isPending || isDisabled} type="number" min="1" value={internalQuantity}
-                   onChange={handleChange}/>
-            <Button disabled={isPending || isDisabled} onClick={handleIncrease}>+</Button>
-        </Wrapper>
+        <Counter isDisabled={isDisabled || isPending} initQuantity={quantity} onChange={handleChange} key={key} />
     )
 }
