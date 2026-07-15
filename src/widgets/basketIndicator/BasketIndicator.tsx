@@ -1,11 +1,6 @@
-import {Suspense} from "react";
-import {ErrorBoundary} from "react-error-boundary";
 import {BasketIndicatorView} from "./BasketIndicatorView.tsx";
+import {withSuspenseHandler} from "../../shared/HOCs/withSuspenseHandler.tsx";
 
-export const BasketIndicator = () => (
-    <Suspense fallback=''>
-        <ErrorBoundary fallbackRender={() => null}>
-            <BasketIndicatorView/>
-        </ErrorBoundary>
-    </Suspense>
-)
+const BasketIndicatorViewEnhanced = withSuspenseHandler(() => '')(() => null)(BasketIndicatorView)
+
+export const BasketIndicator = () => <BasketIndicatorViewEnhanced />

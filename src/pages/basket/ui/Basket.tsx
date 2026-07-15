@@ -1,13 +1,6 @@
-import {Suspense} from "react";
-import {ErrorBoundary} from "react-error-boundary";
 import {ProductsListInBasket} from "../../../widgets/productsListInBasket";
-import {Spinner} from "../../../UI";
-import {DataLoadingError} from "../../../widgets/errors";
+import {withDataLoadingHandler} from "../../withDataLoadingHandler.ts";
 
-export const Basket = () => (
-    <Suspense fallback={<Spinner/>}>
-        <ErrorBoundary fallbackRender={({resetErrorBoundary}) => <DataLoadingError onRetry={resetErrorBoundary}/>}>
-            <ProductsListInBasket/>
-        </ErrorBoundary>
-    </Suspense>
-)
+const ProductsListInBasketEnhanced = withDataLoadingHandler(ProductsListInBasket)
+
+export const Basket = () => <ProductsListInBasketEnhanced />
