@@ -1,6 +1,6 @@
 import {useSearchParams} from "react-router";
 import {useProductsCategories} from "../../../shared/api";
-import {assertNonNullable} from "../../../utils/assertions";
+import {assertNonNullable} from "../../../shared/utils/assertions";
 import {Select} from "../../../UI";
 
 const emptyOption = {

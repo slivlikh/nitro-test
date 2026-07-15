@@ -1,5 +1,5 @@
 import {useQuery} from '@tanstack/react-query'
-import {uniq} from "../../../../../utils/array";
+import {uniq} from "../../../../utils/array";
 import {productsQueryOptions} from "./productsQueryOptions.ts";
 
 

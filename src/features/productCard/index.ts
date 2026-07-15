@@ -1,1 +1,1 @@
-export {ProductCard} from "./components/ProductCard.tsx";
+export {ProductCard} from "./ui/ProductCard.tsx";

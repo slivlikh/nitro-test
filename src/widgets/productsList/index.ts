@@ -1,1 +1,1 @@
-export {DataLoading as ProductsList} from "./components/DataLoading";
+export {DataLoading as ProductsList} from "./ui/DataLoading";

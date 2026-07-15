@@ -1,11 +1,7 @@
 import type {FC} from 'react'
-import {
-    useProduct,
-    type Product as ProductType,
-    useItemQuantityInBasket,
-} from "../../../shared/api";
-import {assertNonNullable} from "../../../utils/assertions";
-import {ProductCard} from "../../../features/";
+import {useProduct, type Product as ProductType, useItemQuantityInBasket} from "../../../shared/api";
+import {assertNonNullable} from "../../../shared/utils/assertions";
+import {BasketProductCard} from "../../../features";
 
 type ProductProps = {
     id: ProductType['id']
@@ -18,5 +14,5 @@ export const Product: FC<ProductProps> = ({id}) => {
     assertNonNullable(product)
     assertNonNullable(quantity)
 
-    return <ProductCard product={product} quantity={quantity}/>
+    return <BasketProductCard product={product} quantity={quantity}/>
 }

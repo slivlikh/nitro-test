@@ -1,5 +1,5 @@
 import type {FC} from 'react'
-import {Error} from "../../shared/components/Error.tsx";
+import {Error} from "../../shared/ui/Error.tsx";
 
 type ChunkLoadingErrorProps = {
     onRetry: () => void;

@@ -1,1 +1,1 @@
-export {DataLoading as ProductsListInBasket} from "./components/DataLoading.tsx";
+export {DataLoading as ProductsListInBasket} from "./ui/DataLoading.tsx";

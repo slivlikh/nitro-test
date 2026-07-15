@@ -2,7 +2,7 @@ import {useBasket, useProductsPriceById} from "../../../shared/api";
 import {Product} from "./Product.tsx";
 import {Total} from "./Total.tsx";
 import {EmptyScreen} from "./EmptyScreen.tsx";
-import {assertNonNullable} from "../../../utils/assertions";
+import {assertNonNullable} from "../../../shared/utils/assertions";
 
 export const ProductsListInBasket = () => {
 

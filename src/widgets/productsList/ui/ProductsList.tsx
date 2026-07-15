@@ -2,7 +2,7 @@ import {useSearchParams} from "react-router";
 import {useProductIds} from "../../../shared/api";
 import {Product} from "./Product.tsx";
 import {Filters} from "./Filters.tsx";
-import {assertNonNullable} from "../../../utils/assertions";
+import {assertNonNullable} from "../../../shared/utils/assertions";
 
 export const ProductsList = () => {
     const [searchParams] = useSearchParams();
